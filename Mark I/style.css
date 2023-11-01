@@ -1,0 +1,178 @@
+:root {
+    --text-color: rgba(19, 16, 214, 0.884);
+    --bg-url: url(./assets/bg_darkmode.jpg);
+    --stroke-color: rgba(255, 255, 255, 1);
+    --surface-color: rgba(218, 221, 11, 0.5);
+    --color: rgba(218, 221, 11, 0.5);
+    --links-color: rgba(19, 16, 214, 0.884);
+    --links-background: rgba(217, 231, 18, 1);
+    --switch-bg-url: url(./assets/Icons/moon-stars-svgrepo-com.svg)
+}
+
+.light {
+    --text-color: rgb(223, 226, 13);
+    --bg-url: url(./assets/bg_lightmode.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(19, 16, 214, 0.884);
+    --color: rgba(19, 16, 214, 0.884);
+    --links-color: rgba(19, 16, 214, 0.884);
+    --links-background: rgba(19, 16, 214, 0.4);
+    --switch-bg-url: url(./assets/Icons/sun-2-svgrepo-com.svg)
+}
+
+body {
+    background: var(--bg-url);
+    background-position: center;
+}
+
+body* {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color)
+}
+
+#seletores {
+    width: 400px;
+    margin: auto;
+    align-items: center;
+}
+
+/*Links*/
+#seletores ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+#seletores ul li a {
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px;
+    align-items: center;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2ms;
+    color: var(--text-color);
+
+}
+
+#seletores ul li a:hover {
+    background: rgba(217, 231, 18, 1);
+    border: 1px solid rgb(217, 231, 18);
+    color: blue;
+}
+
+#top-sidebar {
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+
+}
+
+#top-sidebar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+#top-sidebar ul li a {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px 24px;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgb(23, 45, 236);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    transition: background 0.2s;
+
+}
+
+/*sudo selector*/
+#top-sidebar ul li a:hover {
+    background: rgba(217, 231, 18, 1);
+    border: 1px solid rgb(217, 231, 18);
+
+}
+
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 2px 0 0 20px;
+    font-size: 24px;
+
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 16px;
+    transition: background 0.2s;
+    color: var(--color);
+}
+
+#social-links a:hover {
+    color: var(--links-color);
+    background: var(--links-background);
+
+
+}
+
+footer {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+    padding: 30px;
+    color: var(--surface-color);
+}
+
+#switch {
+    position: relative;
+    width: 65px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translatey(-50%);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+}
