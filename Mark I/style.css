@@ -31,9 +31,12 @@ body* {
 }
 
 #seletores {
-    width: 400px;
+    width: 100%;
+    max-width: 588px;
     margin: auto;
-    align-items: center;
+    box-sizing: border-box;
+
+
 }
 
 /*Links*/
@@ -42,13 +45,14 @@ body* {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0px 0px 0px 0px;
 
 }
 
 #seletores ul li a {
     display: flex;
     justify-content: center;
-    padding: 16px 24px;
+    padding: 16px 25px;
     align-items: center;
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
@@ -157,12 +161,16 @@ footer {
     left: 0;
     z-index: 1;
     transform: translatey(-50%);
+    animation: slide-out 0.2s;
 }
 
-.light #switch button{
-    right: 0;
-    left: initial;
+.light #switch button {
+    animation: slide-in 0.2s forwards;
 
+}
+
+#switch button:hover {
+    outline: 8px solid rgba(255, 255, 255, 0.5)
 }
 
 #switch span {
@@ -175,4 +183,25 @@ footer {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
 
+}
+
+/*Animaão*/
+@keyframes slide-in {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
 }
